@@ -1,0 +1,68 @@
+<?php
+
+/* SonataAdminBundle:Helper:render_form_dismissable_errors.html.twig */
+class __TwigTemplate_0e3e7976044bbcbbec9f6f9cd67ce3eea40ef89a55e7698385df433c4ea7022d extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        $this->parent = false;
+
+        $this->blocks = array(
+        );
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_86fa9e5097ba15b8dee41f66ef516d902ae6ddd71d1126903f7d9e9adaa96132 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_86fa9e5097ba15b8dee41f66ef516d902ae6ddd71d1126903f7d9e9adaa96132->enter($__internal_86fa9e5097ba15b8dee41f66ef516d902ae6ddd71d1126903f7d9e9adaa96132_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "SonataAdminBundle:Helper:render_form_dismissable_errors.html.twig"));
+
+        // line 1
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "vars", array()), "errors", array()));
+        foreach ($context['_seq'] as $context["_key"] => $context["error"]) {
+            // line 2
+            echo "    <div class=\"alert alert-danger alert-dismissable\">
+        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>
+        ";
+            // line 4
+            echo twig_escape_filter($this->env, $this->getAttribute($context["error"], "message", array()), "html", null, true);
+            echo "
+    </div>
+";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['error'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        
+        $__internal_86fa9e5097ba15b8dee41f66ef516d902ae6ddd71d1126903f7d9e9adaa96132->leave($__internal_86fa9e5097ba15b8dee41f66ef516d902ae6ddd71d1126903f7d9e9adaa96132_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "SonataAdminBundle:Helper:render_form_dismissable_errors.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  30 => 4,  26 => 2,  22 => 1,);
+    }
+
+    public function getSource()
+    {
+        return "{% for error in form.vars.errors %}
+    <div class=\"alert alert-danger alert-dismissable\">
+        <button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">×</button>
+        {{ error.message }}
+    </div>
+{% endfor %}
+";
+    }
+}

@@ -1,0 +1,12 @@
+gestion_projet_projet:
+    resource: "@FrontBundle/Resources/config/routing/projet.yml"
+    prefix:   /projet
+
+front_depoartement:
+    path:     /departement
+    defaults: { _controller: FrontBundle:Departement:index }
+
+front_depoartement:
+    path:     /employe
+    defaults: { _controller: FrontBundle:Employe:index } 
+

@@ -1,0 +1,13 @@
+<table border=1>
+    <tr>
+        <td>ID</td>
+        <td>Nom</td>
+    </tr>
+
+{% for d in departement %}
+    <tr>
+        <td>{{ d.id}}</td>
+        <td>{{ d.nom}}</td>
+    </tr>
+{% endfor %}
+</table>

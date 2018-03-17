@@ -1,0 +1,12 @@
+gestion_projet_homepage:
+    path:     /
+    defaults: { _controller: GestionProjetBundle:Default:index }
+
+page_projet_acceuil:
+    path:     /page
+    defaults: { _controller: GestionProjetBundle:Default:acceuil }
+    
+page_projet_num:
+    path:     /page/{num}
+    defaults: { _controller: GestionProjetBundle:Default:page }   
+  
